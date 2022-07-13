@@ -2,6 +2,10 @@
     font-family: MonumentExtended;
     src: url("MonumentExtended-Regular.otf") format("opentype");
 }
+@font-face {
+    font-family: Poppins;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,14 +17,25 @@ body {
     overflow-x: hidden;
 }
 section {
-    height: 100vh;
-    width: 100%;
+    position: relative;
+    width: 85vw;
+    height: 90vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding-left: 15vw;
+    padding-top: 10vh;
+    align-items: flex-start;
 }
-
+h1 {
+    font-size: 80px;
+    text-align: left;
+    text-shadow: 0 0 24px #202020;
+}
+p {
+    margin-top: 1em;
+    font-family: Poppins;
+    font-size: 30px;
+    max-width: 16em;
+}
 /* hero section */
 nav {
     height: 80px;
@@ -50,24 +65,25 @@ nav a:hover {
     padding-bottom: 8px;
     border-bottom: solid 1px white;
 }
-h1 {
-    font-size: 96px;
-    text-align: center;
-}
 .hero {
-    /* nav height */
-    height: calc(100vh - 80px);
+    width: 100vw;
+    /* nav height + nav-top margin */
+    height: calc(100vh - 96px);
+    padding: 0;
+    align-items: center;
+    justify-content: center;
 }
 .hero h1 {
+    text-align: center;
     transition: transform 800ms;
     transition-timing-function: ease-out;
     transform: translateX(0px);
 }
 .hero div:hover h1.right {
-    transform: translateX(-50vw);
+    transform: translateX(-80%);
 }
 .hero div:hover h1.left {
-    transform: translateX(54vw);
+    transform: translateX(92%);
 }
 .hero img {
     position: absolute;
@@ -75,4 +91,11 @@ h1 {
     z-index: -1;
     width: 68%;
     object-fit: contain;
+}
+/* press-feedback section */
+img[alt=press-feedback] {
+    width: 75%;
+    z-index: -1;
+    position: absolute;
+    transform: scaleX(-1);
 }
