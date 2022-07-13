@@ -1,0 +1,78 @@
+@font-face {
+    font-family: MonumentExtended;
+    src: url("MonumentExtended-Regular.otf") format("opentype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: MonumentExtended;
+}
+body {
+    background-color: #101010;
+    overflow-x: hidden;
+}
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* hero section */
+nav {
+    height: 80px;
+    display: flex;
+    padding: 0 64px;
+    margin-top: 16px;
+    align-items: center;
+    width: calc(100% - 128px);
+    justify-content: space-between;
+}
+nav h2 {
+    font-size: 28px;
+}
+nav a {
+    margin-left: 32px;
+    padding-bottom: 0px;
+    text-decoration: none;
+    background-color: #101010;
+    border-bottom: solid 1px transparent;
+    border-radius: 6px;
+    color: grey;
+
+    transition: all 200ms;
+}
+nav a:hover {
+    color: white;
+    padding-bottom: 8px;
+    border-bottom: solid 1px white;
+}
+h1 {
+    font-size: 96px;
+    text-align: center;
+}
+.hero {
+    /* nav height */
+    height: calc(100vh - 80px);
+}
+.hero h1 {
+    transition: transform 800ms;
+    transition-timing-function: ease-out;
+    transform: translateX(0px);
+}
+.hero div:hover h1.right {
+    transform: translateX(-50vw);
+}
+.hero div:hover h1.left {
+    transform: translateX(54vw);
+}
+.hero img {
+    position: absolute;
+    /* bottom layer/last layer of parent */
+    z-index: -1;
+    width: 68%;
+    object-fit: contain;
+}
