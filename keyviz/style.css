@@ -18,23 +18,31 @@ body {
 }
 section {
     position: relative;
-    width: 85vw;
-    height: 90vh;
+    width: 88vw;
+    height: 100vh;
     display: flex;
-    padding-left: 15vw;
-    padding-top: 10vh;
+    padding-left: 12vw;  
     align-items: flex-start;
 }
 h1 {
     font-size: 80px;
     text-align: left;
     text-shadow: 0 0 24px #202020;
+    line-height: 1.25em;
 }
 p {
     margin-top: 1em;
     font-family: Poppins;
     font-size: 30px;
     max-width: 16em;
+}
+img {
+    /* bottom layer/last layer of parent */
+    position: absolute;
+    z-index: -1;
+}
+section div.content {
+    margin-top: 10vh;
 }
 /* hero section */
 nav {
@@ -86,16 +94,16 @@ nav a:hover {
     transform: translateX(92%);
 }
 .hero img {
-    position: absolute;
-    /* bottom layer/last layer of parent */
-    z-index: -1;
     width: 68%;
-    object-fit: contain;
 }
 /* press-feedback section */
-img[alt=press-feedback] {
+section.press img {
     width: 75%;
-    z-index: -1;
-    position: absolute;
     transform: scaleX(-1);
+}
+/* style section */
+section.style img {
+    right: 0;
+    max-height: 100vh;
+    max-width: 60%;
 }
