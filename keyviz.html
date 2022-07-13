@@ -8,6 +8,7 @@
     <title>Keyviz</title>
 
     <link rel="stylesheet" href="keyviz/style.css">
+    <link rel="shortcut icon" href="keyviz/tray.ico" type="image/x-icon">  
 </head>
 <body>
     <nav>
@@ -28,16 +29,89 @@
     <section class="press">
         <img src="keyviz/click-mockup.png" alt="press-feedback">
         <div class="content">
-            <h1>Keypress 👇</br>Feedback</h1>
+            <h1>Keypress 👇</h1>
+            <h1>Feedback</h1>
             <p>Get the important press feedback on the visualization with a subtle animation.</p>
         </div>
     </section>
     <section class="style">
         <div class="content">
-            <h1>Stylize to</br>your hearts</br>🎨 content 🦄</h1>
+            <h1>Stylize to</h1>
+            <h1>your hearts</h1>
+            <h1>🎨 content 🦄</h1>
             <p>Get the important press feedback on the visualization with a subtle animation.</p>
         </div>
         <img src="keyviz/stylize-reel.png" alt="custom-styles">
     </section>
+    <section class="settings">
+        <div class="content">
+            <h1>Customize ⚙️</h1>
+            <h1>every part to</h1>
+            <h1>✨ your liking</h1>
+            <p>Get the important press feedback on the visualization with a subtle animation.</p>
+        </div>
+        <img src="keyviz/settings.png" alt="settings">
+    </section>
+    <section class="about">
+        <img src="keyviz/laptop-mockup.png" alt="laptop-mockup">
+        <div class="content">
+            <div class="row">
+                <img src="keyviz/icon.png" alt="icon">
+                <h1>Keyviz</h1>
+            </div>
+            <h2>©️ Rahul Mula</h2>
+            <p>This is an open-source software whose source code can be found at github. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="expansion-panel b-top">
+                <div class="title">
+                    <h2>Specs</h2>
+                    <h2 class="icon">+</h2>
+                </div>
+                <div class="body close">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
+                </div>
+            </div>
+            <div class="expansion-panel">
+                <div class="title">
+                    <h2>Download</h2>
+                    <h2 class="icon">+</h2>
+                </div>
+                <div class="body close">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
+                </div>
+            </div>
+            <div class="expansion-panel">
+                <div class="title">
+                    <h2>Support</h2>
+                    <h2 class="icon">+</h2>
+                </div>
+                <div class="body close">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const panels = document.querySelectorAll(".expansion-panel")
+        panels.forEach((panel) => {
+            panel.querySelector(".title").onclick = () => {
+                const panelBody = panel.querySelector(".body")
+                const icon = panel.querySelector(".icon")
+                if (panelBody.classList.contains("close")) {
+                    panelBody.classList.remove("close")
+                    panelBody.classList.add("open")
+                    icon.innerHTML = "-"
+                    icon.style.transform = "rotate(180deg)"
+                }
+                else {
+                    panelBody.classList.remove("open")
+                    panelBody.classList.add("close")
+                    panel.querySelector(".icon").innerHTML = "+"
+                    icon.style.transform = "rotate(0deg)"
+                }
+            }
+        })
+    </script>
 </body>
 </html>

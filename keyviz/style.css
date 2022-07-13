@@ -1,6 +1,14 @@
 @font-face {
+    font-family: MonumentExtendedLight;
+    src: url("PPMonumentExtended/PPMonumentExtended-Light.otf") format("opentype");
+}
+@font-face {
     font-family: MonumentExtended;
-    src: url("MonumentExtended-Regular.otf") format("opentype");
+    src: url("PPMonumentExtended/PPMonumentExtended-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: MonumentExtendedBold;
+    src: url("PPMonumentExtended/PPMonumentExtended-Black.otf") format("opentype");
 }
 @font-face {
     font-family: Poppins;
@@ -29,6 +37,7 @@ h1 {
     text-align: left;
     text-shadow: 0 0 24px #202020;
     line-height: 1.25em;
+    font-family: MonumentExtendedBold;
 }
 p {
     margin-top: 1em;
@@ -106,4 +115,78 @@ section.style img {
     right: 0;
     max-height: 100vh;
     max-width: 60%;
+}
+/* settings section */
+section.settings img {
+    right: 15%;
+    bottom: 0;
+    max-width: 36%;
+}
+/* settings section */
+section.about {
+    position: relative; 
+    height: min-content;
+    padding-top: 8%;
+
+    min-height: 100vh;
+}
+section.about img[alt=laptop-mockup] {
+    position: sticky;
+    top: 20%;
+    max-width: 56%;
+    transform: rotate(10deg);
+}
+section.about .content {
+    width: 36%;
+}
+section.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+section.about img[alt=icon] {
+    position: relative;
+    width: 80px;
+}
+section.about h1 {
+    font-size: 74px;
+    margin-left: 0.72em;
+    font-family: MonumentExtended;
+}
+section.about h2 {
+    margin: 1em 0;
+}
+section.about p {
+    margin-bottom: 1.24em;
+    max-width: 80%;
+    font-size: 24px;
+}
+.b-top {
+    border-top: solid 1px white;
+}
+.expansion-panel {
+    border-bottom: solid 1px white;
+}
+.expansion-panel .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.expansion-panel .title .icon {
+    transition: transform 200ms;
+}
+.expansion-panel .body {
+    overflow: hidden;
+    transition: all 400ms;
+}
+.expansion-panel .body.open {
+    transition-duration: 800ms;
+    max-height: 128px;
+    padding-bottom: 2em;
+    opacity: 1;
+}
+.expansion-panel .body.close {
+    opacity: 0;
+    max-height: 0;
+    padding-bottom: 0;
 }
