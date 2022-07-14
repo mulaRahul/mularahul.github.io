@@ -16,18 +16,6 @@
     color: white;
     font-family: MonumentExtended;
 }
-.fade[data-scroll] {
-    transition: all 800ms;
-    transition-timing-function: cubic-bezier(.075,.82,.165,1);
-}
-.fade[data-scroll="in"] {
-    opacity: 1;
-    transform: translateY(0);
-}
-.fade[data-scroll="out"] {
-    opacity: 0;
-    transform: translateY(80px);
-}
 h2 {
     display: block;
     overflow: hidden;
@@ -153,6 +141,7 @@ section.about {
     position: relative; 
     height: min-content;
     padding-top: 8%;
+    padding-left: 6vw;
     scroll-snap-align: none;
     min-height: 100vh;
 }
@@ -235,3 +224,50 @@ section.about p {
     max-height: 0;
     padding-bottom: 0;
 }
+/* animations */
+.fade-up[data-scroll] {
+    transition-property: all ;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(.075,.82,.165,1);
+}
+.fade-up[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-up[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(80px);
+}
+.fade-r[data-scroll] {
+    transition-property: all;
+    transition-duration: 1200ms;
+    transition-timing-function: cubic-bezier(.075,.82,.165,1);
+}
+.fade-r[data-scroll="in"] {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fade-r[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(80px);
+}
+.fade-l[data-scroll] {
+    transition-property: all;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(.075,.82,.165,1);
+}
+.fade-l[data-scroll="in"] {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateX(0);
+}
+.fade-l[data-scroll="out"] {
+    opacity: 0;
+    letter-spacing: -0.5em;
+    transform: translateX(-80px);
+}
+.t-shorter-delay { transition-delay: 200ms; }
+.t-short-delay { transition-delay: 300ms; }
+.t-long-delay { transition-delay: 400ms; }
+.t-longer-delay { transition-delay: 600ms; }
+.t-verylong-delay { transition-delay: 800ms; }
