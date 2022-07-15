@@ -125,10 +125,17 @@ section.press img {
     transform: scaleX(-1);
 }
 /* style section */
-section.style img {
-    right: 0;
-    max-height: 100vh;
-    max-width: 60%;
+section.style .reel {
+    position: absolute;
+    z-index: -1;
+
+    right: 0px;
+    bottom: 0px;
+    max-height: 88vh;
+    max-width: 100%;
+    align-self: flex-end;
+    overflow: hidden;
+    transition: opacity 200ms;
 }
 /* settings section */
 section.settings img {

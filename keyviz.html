@@ -24,140 +24,170 @@
                     ""P@*NN#gEZgNN@#@P"" -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyviz</title>
-
-    <link rel="stylesheet" href="keyviz/style.css">
-    <link rel="shortcut icon" href="keyviz/tray.ico" type="image/x-icon">  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyviz</title>
+  <link rel="stylesheet" href="keyviz/style.css">
+  <link rel="shortcut icon" href="keyviz/tray.ico" type="image/x-icon">
 </head>
 <body>
-    <nav>
-        <h2 class="fade-up t-longer-delay" data-scroll="out">Keyviz</h2>
-        <div class="links">
-            <div class="fade-up t-longer-delay" data-scroll="out">
-                <a href="">Log</a>
-            </div>
-            <div class="fade-up" data-scroll="out" style="transition-delay: 700ms;">
-                <a href="">Github</a>
-            </div>
-            <div class="fade-up t-verylong-delay" data-scroll="out">
-                <a href="">Download</a>
-            </div>
-        </div>
-    </nav>
-    <section class="hero">
-        <div>
-            <div data-scroll="out" class="fade-up">
-                <h1 class="right">Visualize your</h1>
-            </div>
-            <div data-scroll="out" class="fade-up t-shorter-delay">
-                <h1 class="left">keypress realtime!</h1>
-            </div>
-        </div>
-        <img src="keyviz/hero-mockup.png" alt="keyviz-preview">
-    </section>
-    <section class="press">
-        <img src="keyviz/click-mockup.png" alt="press-feedback">
-        <div class="content">
-            <h1 data-scroll="out" class="fade-r t-shorter-delay">Keypress 👇</h1>
-            <h1 data-scroll="out" class="fade-l t-short-delay">Feedback</h1>
-            <p data-scroll="out" class="fade-up t-long-delay">Get the important press feedback on the visualization with a subtle animation.</p>
-        </div>
-    </section>
-    <section class="style">
-        <div class="content">
-            <h1 data-scroll="out" class="fade-r t-shorter-delay">Stylize to</h1>
-            <h1 data-scroll="out" class="fade-l t-short-delay">your hearts</h1>
-            <h1 data-scroll="out" class="fade-r t-long-delay">🎨 content 🦄</h1>
-            <p data-scroll="out" class="fade-up t-longer-delay">Get the important press feedback on the visualization with a subtle animation.</p>
-        </div>
-        <img src="keyviz/stylize-reel.png" alt="custom-styles">
-    </section>
-    <section class="settings">
-        <div class="content">
-            <h1 data-scroll="out" class="fade-l t-shorter-delay" style="transition-delay: 200ms;">Customize ⚙️</h1>
-            <h1 data-scroll="out" class="fade-r t-long-delay" style="transition-delay: 400ms;">every part to</h1>
-            <h1 data-scroll="out" class="fade-l t-longer-delay" style="transition-delay: 600ms;">✨ your liking</h1>
-            <p data-scroll="out" class="fade-up t-verylong-delay">Get the important press feedback on the visualization with a subtle animation.</p>
-        </div>
-        <img src="keyviz/settings.png" alt="settings">
-    </section>
-    <section class="about">
-        <img src="keyviz/laptop-mockup.png" alt="laptop-mockup">
-        <div class="content">
-            <div class="row">
-                <img src="keyviz/icon.png" alt="icon">
-                <h1>Keyviz</h1>
-            </div>
-            <h2>©️ Rahul Mula</h2>
-            <p>This is an open-source software whose source code can be found at github. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <nav>
+    <h2 class="fade-up t-longer-delay" data-scroll="out">Keyviz</h2>
+    <div class="links">
+      <div class="fade-up t-longer-delay" data-scroll="out">
+        <a href="">Log</a>
+      </div>
+      <div class="fade-up" data-scroll="out" style="transition-delay: 700ms;">
+        <a href="">Github</a>
+      </div>
+      <div class="fade-up t-verylong-delay" data-scroll="out">
+        <a href="">Download</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+    <div>
+      <div data-scroll="out" class="fade-up">
+        <h1 class="right">Visualize your</h1>
+      </div>
+      <div data-scroll="out" class="fade-up t-shorter-delay">
+        <h1 class="left">keypress realtime!</h1>
+      </div>
+    </div>
+    <img src="keyviz/hero-mockup.png" alt="keyviz-preview">
+  </section>
+  <section class="press">
+    <img src="keyviz/click-mockup.png" alt="press-feedback">
+    <div class="content">
+      <h1 data-scroll="out" class="fade-r t-shorter-delay">Keypress 👇</h1>
+      <h1 data-scroll="out" class="fade-l t-short-delay">Feedback</h1>
+      <p data-scroll="out" class="fade-up t-long-delay">Get the important press feedback on the visualization with a
+        subtle animation.</p>
+    </div>
+  </section>
+  <section class="style">
+    <div class="content">
+      <h1 data-scroll="out" class="fade-r t-shorter-delay" id="first-h1">Stylize to</h1>
+      <h1 data-scroll="out" class="fade-l t-short-delay">your hearts</h1>
+      <h1 data-scroll="out" class="fade-r t-long-delay">🎨 content 🦄</h1>
+      <p data-scroll="out" class="fade-up t-longer-delay">Get the important press feedback on the visualization with a
+        subtle animation.</p>
+    </div>
+    <!-- <img src="keyviz/stylize-reel.png" alt="custom-styles"> -->
+    <div class="reel"></div>
+  </section>
+  <section class="settings">
+    <div class="content">
+      <h1 data-scroll="out" class="fade-l t-shorter-delay" style="transition-delay: 200ms;">Customize ⚙️</h1>
+      <h1 data-scroll="out" class="fade-r t-long-delay" style="transition-delay: 400ms;">every part to</h1>
+      <h1 data-scroll="out" class="fade-l t-longer-delay" style="transition-delay: 600ms;">✨ your liking</h1>
+      <p data-scroll="out" class="fade-up t-verylong-delay">Get the important press feedback on the visualization with a
+        subtle animation.</p>
+    </div>
+    <img src="keyviz/settings.png" alt="settings">
+  </section>
+  <section class="about">
+    <img src="keyviz/laptop-mockup.png" alt="laptop-mockup">
+    <div class="content">
+      <div class="row">
+        <img src="keyviz/icon.png" alt="icon">
+        <h1>Keyviz</h1>
+      </div>
+      <h2>©️ Rahul Mula</h2>
+      <p>This is an open-source software whose source code can be found at github. Lorem, ipsum dolor sit amet
+        consectetur adipisicing elit.</p>
 
-            <div class="expansion-panel b-top">
-                <div class="title">
-                    <h2>Specs</h2>
-                    <h2 class="icon">+</h2>
-                </div>
-                <div class="body close">
-                    Version:         <span>0.1.0b</span></br>
-                    Size:            <span>22.9 mb</span></br>
-                    Latest Update:   <span>17.07.2022</span></br>
-                    Compatibility:   <span>Windows</span></br>
-                </div>
-            </div>
-            <div class="expansion-panel">
-                <div class="title">
-                    <h2>Download</h2>
-                    <h2 class="icon">+</h2>
-                </div>
-                <div class="body close">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
-                </div>
-            </div>
-            <div class="expansion-panel">
-                <div class="title">
-                    <h2>Support</h2>
-                    <h2 class="icon">+</h2>
-                </div>
-                <div class="body close">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
-                </div>
-            </div>
-            <div class="expansion-panel">
-                <div class="title">
-                    <h2>Contact</h2>
-                    <h2 class="icon">+</h2>
-                </div>
-                <div class="body close">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore id eos neque.
-                </div>
-            </div>
+      <div class="expansion-panel b-top">
+        <div class="title">
+          <h2>Specs</h2>
+          <h2 class="icon">+</h2>
         </div>
-    </section>
+        <div class="body close">
+          Version: <span>0.1.0b</span></br>
+          Size: <span>22.9 mb</span></br>
+          Latest Update: <span>17.07.2022</span></br>
+          Compatibility: <span>Windows</span></br>
+        </div>
+      </div>
+      <div class="expansion-panel">
+        <div class="title">
+          <h2>Download</h2>
+          <h2 class="icon">+</h2>
+        </div>
+        <div class="body close">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore
+          id eos neque.
+        </div>
+      </div>
+      <div class="expansion-panel">
+        <div class="title">
+          <h2>Support</h2>
+          <h2 class="icon">+</h2>
+        </div>
+        <div class="body close">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore
+          id eos neque.
+        </div>
+      </div>
+      <div class="expansion-panel">
+        <div class="title">
+          <h2>Known Issues</h2>
+          <h2 class="icon">+</h2>
+        </div>
+        <div class="body close">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolores nobis necessitatibus nesciunt inventore
+          id eos neque.
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="scroll-out.min.js"></script>
-    <script>
-        ScrollOut();
-        const panels = document.querySelectorAll(".expansion-panel")
-        panels.forEach((panel) => {
-            panel.querySelector(".title").onclick = () => {
-                const panelBody = panel.querySelector(".body")
-                const icon = panel.querySelector(".icon")
-                if (panelBody.classList.contains("close")) {
-                    panelBody.classList.remove("close")
-                    panelBody.classList.add("open")
-                    icon.innerHTML = "-"
-                    icon.style.transform = "rotate(180deg)"
-                }
-                else {
-                    panelBody.classList.remove("open")
-                    panelBody.classList.add("close")
-                    panel.querySelector(".icon").innerHTML = "+"
-                    icon.style.transform = "rotate(0deg)"
-                }
-            }
-        })
-    </script>
+  <script src="lottie.js"></script>
+  <script src="scroll-out.min.js"></script>
+  <script>
+    const reelContainer = document.querySelector("section.style .reel");
+    // scroll based animations
+    ScrollOut({
+      onShown: function (element) {
+        if (element.id == "first-h1") {
+          reelContainer.style.opacity = 1;
+        }
+      },
+      onHidden: function (element) {
+        if (element.id == "first-h1") {
+          reelContainer.style.opacity = 0;
+        }
+      }
+    });
+    // lottie animations
+    let reelAnimation = bodymovin.loadAnimation({
+      container: reelContainer,
+      renderer: "svg",
+      autoplay: true,
+      loop: true,
+      path: "keyviz/reel.json",
+    });
+    // Expansion Panels
+    const panels = document.querySelectorAll(".expansion-panel");
+    panels.forEach((panel) => {
+      panel.querySelector(".title").onclick = () => {
+        const panelBody = panel.querySelector(".body");
+        const icon = panel.querySelector(".icon");
+        if (panelBody.classList.contains("close")) {
+          panelBody.classList.remove("close");
+          panelBody.classList.add("open");
+          icon.innerHTML = "-";
+          icon.style.transform = "rotate(180deg)";
+        }
+        else {
+          panelBody.classList.remove("open");
+          panelBody.classList.add("close");
+          panel.querySelector(".icon").innerHTML = "+";
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+    });
+  </script>
 </body>
 </html>
