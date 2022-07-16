@@ -47,21 +47,21 @@
     </div>
   </nav>
   <section class="hero">
-    <div>
+    <div class="title">
       <div data-scroll="out" class="fade-up">
         <h1 class="right">Visualize your</h1>
       </div>
-      <div data-scroll="out" class="fade-up t-shorter-delay">
+      <div data-scroll="out" class="fade-up t-shorter-delay" id="hero-h1">
         <h1 class="left">keypress realtime!</h1>
       </div>
     </div>
-    <div id="hero-mockup" class="bg" data-scroll="out"></div>
+    <lottie-player src="keyviz/hero.json" class="bg"></lottie-player>
   </section>
   <section class="press">
-    <div id="press-feedback" class="bg" data-scroll="out"></div>
+    <lottie-player src="keyviz/press.json" loop class="bg"></lottie-player>
     <div class="content">
-      <h1 data-scroll="out" class="fade-r t-shorter-delay">Keypress 👇</h1>
-      <h1 data-scroll="out" class="fade-l t-short-delay">Feedback</h1>
+      <h1 data-scroll="out" class="fade-r t-shorter-delay" id="press-h1">Keypress 👇</h1>
+      <h1 data-scroll="out" class="fade-r t-short-delay">Feedback</h1>
       <p data-scroll="out" class="fade-up t-long-delay">Get the important press feedback on the visualization with a
         subtle animation.</p>
     </div>
@@ -74,7 +74,7 @@
       <p data-scroll="out" class="fade-up t-longer-delay">Get the important press feedback on the visualization with a
         subtle animation.</p>
     </div>
-    <div id="reel"></div>
+    <lottie-player src="keyviz/reel.json" loop class="bg"></lottie-player>
   </section>
   <section class="settings">
     <div class="content">
@@ -84,7 +84,7 @@
       <p data-scroll="out" class="fade-up t-verylong-delay">Get the important press feedback on the visualization with a
         subtle animation.</p>
     </div>
-    <div id="settings-window"></div>
+    <lottie-player src="keyviz/settings.json" loop></lottie-player>
   </section>
   <section class="about">
     <div class="img-container">
@@ -144,7 +144,7 @@
     </div>
   </section>
 
-  <script src="lottie.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="scroll-out.min.js"></script>
   <script src="keyviz/script.js"></script>
 </body>

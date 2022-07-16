@@ -1,10 +1,10 @@
 @font-face {
   font-family: MonumentExtended;
-  src: url("PPMonumentExtended/PPMonumentExtended-Regular.otf") format("opentype");
+  src: url("fonts/PPMonumentExtended-Regular.otf") format("opentype");
 }
-font-face {
+@font-face {
   font-family: MonumentExtendedBold;
-  src: url("PPMonumentExtended/PPMonumentExtended-Black.otf") format("opentype");
+  src: url("fonts/PPMonumentExtended-Black.otf") format("opentype");
 }
 @font-face {
   font-family: Poppins;
@@ -32,6 +32,18 @@ body {
   color: #1c1c1c;
   text-shadow: none;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+}
 section {
   position: relative;
   width: 88vw;
@@ -58,6 +70,10 @@ p {
   /* bottom layer/last layer of parent */
   position: absolute;
   z-index: -1;
+}
+.cover-parent {
+  width: 100%;
+  height: 100%;
 }
 section div.content {
   margin-top: 10vh;
@@ -94,7 +110,7 @@ nav a:hover {
   padding-bottom: 8px;
   border-bottom: solid 1px white;
 }
-.hero {
+section.hero {
   width: 100vw;
   /* nav height + nav-top margin */
   height: calc(100vh - 96px);
@@ -103,49 +119,48 @@ nav a:hover {
   justify-content: center;
   scroll-snap-align: none;
 }
-.hero h1 {
+section.hero h1 {
   text-align: center;
   transition: transform 1600ms;
   transition-timing-function: cubic-bezier(.075, .82, .165, 1);
   transform: translateX(0px);
 }
-.hero div:hover h1.right {
-  transform: translateX(-80%);
+section.hero > div.title:hover h1.right {
+  transform: translateX(-76%);
 }
-.hero div:hover h1.left {
+section.hero > div.title:hover h1.left {
   transform: translateX(92%);
 }
-.hero #hero-mockup {
+section.hero > lottie-player {
   margin-bottom: 4%;
   width: 92%;
+  opacity: 0;
+  transition: opacity 800ms;
 }
 /* press-feedback section */
-section.press #press-feedback {
+section.press > lottie-player {
   width: 75%;
-  margin-bottom: 4%;
   align-self: flex-end;
 }
 /* style section */
-section.style #reel {
-  position: absolute;
-  z-index: -1;
-
+section.style > lottie-player {
   right: 0px;
   bottom: 0px;
-  max-height: 88vh;
-  max-width: 100%;
+  margin: 0 auto;
+  /* max-height: 96vh; */
+  height: min-content;
+  max-height: 96vh;
+  width: 80%;
   align-self: flex-end;
   overflow: hidden;
   transition: opacity 200ms;
 }
 /* settings section */
-section.settings #settings-window {
+section.settings > lottie-player {
   position: absolute;
   z-index: -1;
   right: 15%;
-  bottom: 0;
   max-width: 40%;
-  transition: bottom 800ms;
 }
 /* about section */
 section.about {
@@ -157,27 +172,27 @@ section.about {
   scroll-snap-align: none;
   justify-content: space-between;
 }
-section.about .img-container {
+section.about > div.img-container {
   top: 0;
   width: 75%;
   height: 100vh;
   position: sticky;
   z-index: 10;
 }
-section.about img[alt=laptop-mockup] {
+section.about > div.img-container > img {
   position: absolute;
   left: 0;
   bottom: 0;
   max-width: 92vw;
   pointer-events: none;
 }
-section.about .content {
+section.about > div.content {
   position: relative;
   z-index: 0;
   padding: 12% 0;
   width: 36%;
 }
-section.about .row {
+section.about > div.content > div.row {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -205,26 +220,26 @@ section.about p {
   border-top-right-radius: 12px;
   border-top: solid 1px grey;
 }
-.expansion-panel {
+div.expansion-panel {
   border-bottom: solid 1px grey;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   transition: all 200ms;
 }
-.expansion-panel:hover {
+div.expansion-panel:hover {
   border-bottom-color: white;
 }
-.expansion-panel .title {
+div.expansion-panel > div.title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
   cursor: pointer;
 }
-.expansion-panel .title .icon {
+div.expansion-panel > div.title > .icon {
   transition: transform 400ms;
 }
-.expansion-panel .body {
+div.expansion-panel > div.body {
   font-family: Poppins;
   padding: 0 28px;
   overflow: hidden;
@@ -232,17 +247,17 @@ section.about p {
   transition: all 400ms;
   color: grey;
 }
-.expansion-panel .body span {
+div.expansion-panel > div.body span {
   font-family: Poppins;
   color: lightgrey;
 }
-.expansion-panel .body.open {
+div.expansion-panel > div.body.open {
   transition-duration: 800ms;
   max-height: 128px;
   padding-bottom: 2em;
   opacity: 1;
 }
-.expansion-panel .body.close {
+div.expansion-panel > div.body.close {
   opacity: 0;
   max-height: 0;
   padding-bottom: 0;
