@@ -1,16 +1,21 @@
+const heroPlacholderImg = document.querySelector("section.hero img");
 // lottie animations
 const heroAnimation = document.querySelector("section.hero lottie-player");
 const pressAnimation = document.querySelector("section.press lottie-player");
 const reelAnimation = document.querySelector("section.style lottie-player");
 const settingsAnimation = document.querySelector("section.settings lottie-player");
 let heroPlayed = false;
+// fade in placeholder image (heroAnimation frame 0)
+document.addEventListener("DOMContentLoaded", () => heroPlacholderImg.style.opacity = 1);
 // play hero animation when it's ready
 heroAnimation.addEventListener("ready", () => {
+  console.log("Animation [ready] to play!");
   heroAnimation.style.opacity = 1;
   setTimeout(() => {
+    heroPlacholderImg.style.visibility = "hidden";
     heroAnimation.play();
     heroPlayed = true;
-  }, 1200);
+  }, 600);
 });
 // scroll based animations
 ScrollOut({

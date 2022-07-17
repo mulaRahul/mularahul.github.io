@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: Poppins;
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  src: url("fonts/Poppins-Light.ttf");
 }
 * {
   margin: 0;
@@ -36,13 +36,13 @@ body {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
+  background-color: #1a1a1a;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #303030;
+  background-color: #3a3a3a;
 }
 section {
   position: relative;
@@ -65,6 +65,7 @@ p {
   font-family: Poppins;
   font-size: 30px;
   max-width: 16em;
+  pointer-events: none;
 }
 .bg {
   /* bottom layer/last layer of parent */
@@ -98,6 +99,7 @@ nav a {
   margin-left: 32px;
   padding-bottom: 0px;
   text-decoration: none;
+  line-height: 24px;
   background-color: #101010;
   border-bottom: solid 1px transparent;
   border-radius: 6px;
@@ -131,23 +133,28 @@ section.hero > div.title:hover h1.right {
 section.hero > div.title:hover h1.left {
   transform: translateX(92%);
 }
-section.hero > lottie-player {
+section.hero > div.img-container {
   margin-bottom: 4%;
-  width: 92%;
+  width: 80%;
+  height: 96%;
+}
+section.hero > div.img-container > img, 
+section.hero > div.img-container > lottie-player {
   opacity: 0;
-  transition: opacity 800ms;
+  transition: opacity 400ms;
 }
 /* press-feedback section */
 section.press > lottie-player {
   width: 75%;
+  margin-bottom: 4%;
   align-self: flex-end;
+  height: min-content;
 }
 /* style section */
 section.style > lottie-player {
   right: 0px;
   bottom: 0px;
   margin: 0 auto;
-  /* max-height: 96vh; */
   height: min-content;
   max-height: 96vh;
   width: 80%;
@@ -159,8 +166,10 @@ section.style > lottie-player {
 section.settings > lottie-player {
   position: absolute;
   z-index: -1;
-  right: 15%;
+  right: 12%;
   max-width: 40%;
+  max-height: 86%;
+  align-self: center;
 }
 /* about section */
 section.about {

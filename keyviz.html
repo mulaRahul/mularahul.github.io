@@ -1,27 +1,14 @@
 <!DOCTYPE html>
-<!--                __gggrgM**M#mggg__
-                __wgNN@"B*P""mp""@d#"@N#Nw__
-              _g#@0F_a*F#  _*F9m_ ,F9*__9NG#g_
-           _mN#F  aM"    #p"    !q@    9NL "9#Qu_
-          g#MF _pP"L  _g@"9L_  _g""#__  g"9w_ 0N#p
-        _0F jL*"   7_wF     #_gF     9gjF   "bJ  9h_
-       j#  gAF    _@NL     _g@#_      J@u_    2#_  #_
-      ,FF_#" 9_ _#"  "b_  g@   "hg  _#"  !q_ jF "*_09_
-      F N"    #p"      Ng@       `#g"      "w@    "# t
-     j p#    g"9_     g@"9_      gP"#_     gF"q    Pb L
-     0J  k _@   9g_ j#"   "b_  j#"   "b_ _d"   q_ g  ##
-     #F  `NF     "#g"       "Md"       5N#      9W"  j#
-     #k  jFb_    g@"q_     _*"9m_     _*"R_    _#Np  J#
-     tApjF  9g  J"   9M_ _m"    9%_ _*"   "#  gF  9_jNF
-      k`N    "q#       9g@        #gF       ##"    #"j
-      `_0q_   #"q_    _&"9p_    _g"`L_    _*"#   jAF,'
-       9# "b_j   "b_ g"    *g _gF    9_ g#"  "L_*"qNF
-        "b_ "#_    "NL      _B#      _I@     j#" _#"
-          NM_0"*g_ j""9u_  gP  q_  _w@ ]_ _g*"F_g@
-           "NNh_ !w#_   9#g"    "m*"   _#*" _dN@"
-              9##g_0@q__ #"4_  j*"k __*NF_g#@P"
-                "9NN#gIPNL_ "b@" _2M"Lg#N@F"
-                    ""P@*NN#gEZgNN@#@P"" -->
+<!--
+88888888ba               88                        88  88b           d88               88              
+88      "8b              88                        88  888b         d888               88              
+88      ,8P              88                        88  88`8b       d8'88               88              
+88aaaaaa8P'  ,adPPYYba,  88,dPPYba,   88       88  88  88 `8b     d8' 88  88       88  88  ,adPPYYba,  
+88""""88'    ""     `Y8  88P'    "8a  88       88  88  88  `8b   d8'  88  88       88  88  ""     `Y8  
+88    `8b    ,adPPPPP88  88       88  88       88  88  88   `8b d8'   88  88       88  88  ,adPPPPP88  
+88     `8b   88,    ,88  88       88  "8a,   ,a88  88  88    `888'    88  "8a,   ,a88  88  88,    ,88  
+88      `8b  `"8bbdP"Y8  88       88   `"YbbdP'Y8  88  88     `8'     88   `"YbbdP'Y8  88  `"8bbdP"Y8
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -36,7 +23,7 @@
     <h2 class="fade-up t-longer-delay" data-scroll="out">Keyviz</h2>
     <div class="links">
       <div class="fade-up t-longer-delay" data-scroll="out">
-        <a href="">Log</a>
+        <a href="">Support 💖</a>
       </div>
       <div class="fade-up" data-scroll="out" style="transition-delay: 700ms;">
         <a href="">Github</a>
@@ -55,13 +42,16 @@
         <h1 class="left">keypress realtime!</h1>
       </div>
     </div>
-    <lottie-player src="keyviz/hero.json" class="bg"></lottie-player>
+    <div class="img-container bg">
+      <img src="keyviz/hero-img.png" class="bg cover-parent" alt="mockup">
+      <lottie-player src="keyviz/hero.json" class="cover-parent"></lottie-player>
+    </div>
   </section>
   <section class="press">
-    <lottie-player src="keyviz/press.json" loop class="bg"></lottie-player>
+    <lottie-player src="keyviz/press.json" intermission="200" loop class="bg"></lottie-player>
     <div class="content">
       <h1 data-scroll="out" class="fade-r t-shorter-delay" id="press-h1">Keypress 👇</h1>
-      <h1 data-scroll="out" class="fade-r t-short-delay">Feedback</h1>
+      <h1 data-scroll="out" class="fade-l t-short-delay">Feedback</h1>
       <p data-scroll="out" class="fade-up t-long-delay">Get the important press feedback on the visualization with a
         subtle animation.</p>
     </div>
@@ -78,13 +68,13 @@
   </section>
   <section class="settings">
     <div class="content">
-      <h1 data-scroll="out" class="fade-l t-shorter-delay" style="transition-delay: 200ms;" id="settings-h1">Customize ⚙️</h1>
-      <h1 data-scroll="out" class="fade-r t-long-delay" style="transition-delay: 400ms;">every part to</h1>
-      <h1 data-scroll="out" class="fade-l t-longer-delay" style="transition-delay: 600ms;">✨ your liking</h1>
+      <h1 data-scroll="out" class="fade-l t-shorter-delay" id="settings-h1">Customize ⚙️</h1>
+      <h1 data-scroll="out" class="fade-r t-long-delay">every part to</h1>
+      <h1 data-scroll="out" class="fade-l t-longer-delay">✨ your liking</h1>
       <p data-scroll="out" class="fade-up t-verylong-delay">Get the important press feedback on the visualization with a
         subtle animation.</p>
     </div>
-    <lottie-player src="keyviz/settings.json" loop></lottie-player>
+    <lottie-player src="keyviz/settings.json" intermission="1600" loop></lottie-player>
   </section>
   <section class="about">
     <div class="img-container">
@@ -144,7 +134,7 @@
     </div>
   </section>
 
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.5.7/lottie-player.min.js"></script>
   <script src="scroll-out.min.js"></script>
   <script src="keyviz/script.js"></script>
 </body>
