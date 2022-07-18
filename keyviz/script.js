@@ -9,7 +9,6 @@ let heroPlayed = false;
 document.addEventListener("DOMContentLoaded", () => heroPlacholderImg.style.opacity = 1);
 // play hero animation when it's ready
 heroAnimation.addEventListener("ready", () => {
-  console.log("Animation [ready] to play!");
   heroAnimation.style.opacity = 1;
   setTimeout(() => {
     heroPlacholderImg.style.visibility = "hidden";

@@ -134,12 +134,16 @@ section.hero > div.title:hover h1.left {
   transform: translateX(92%);
 }
 section.hero > div.img-container {
-  margin-bottom: 4%;
   width: 80%;
-  height: 96%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section.hero > div.img-container > img, 
 section.hero > div.img-container > lottie-player {
+  width: auto;
+  height: 100%;
   opacity: 0;
   transition: opacity 400ms;
 }
