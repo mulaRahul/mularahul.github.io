@@ -305,9 +305,57 @@ div.expansion-panel > div.body > table td {
   font-family: Poppins;
   font-weight: lighter;
 }
+@media (max-width: 1264px) {
+  nav h2 { font-size: 24px; }
+  nav a { font-size: 18px; }
+  h1 { font-size: 68px; }
+  p { font-size: 28px; }
+  section.about > div.content { padding: 8% 0; }
+  section.about > div.content h1 { font-size: 64px; }
+}
+@media (max-width: 1080px) {
+  section.press { height: 86vh; }
+  h1 { font-size: 56px; }
+  section.settings p { font-size: 24px; max-width: 36%; }
+  section.settings > lottie-player { 
+    max-width: 48%; height: min-content; bottom: 8%;
+  }
+  section.about { 
+    display: flex; flex-direction: column-reverse; padding-left: 1vw;
+  }
+  section.about > div.img-container { 
+    position: relative; height: 68vh; width: 100%;
+  }
+  section.about > div.img-container > img { max-width: 120vw; }
+  section.about > div.content { 
+    align-self: center; padding-left: 12%; width: 80%; 
+  }
+  section.about > div.content h1 { font-size: 64px; }
+}
+@media (max-width: 800px) {
+  nav {justify-content: center;}
+  nav h2 {display: none;}
+  h1 {font-size: 38px;}
+  p {font-size: 20px;}
+  section.press {height: 64vh;}
+  section.style {overflow: hidden;}
+  section.style > lottie-player {width: 144%; max-height: max-content;}
+  section.settings {height: 128vh;}
+  section.settings p {max-width: 90%;}
+  section.settings > lottie-player {min-width: 386px;}
+  section.about > div.img-container {height: 48vh;}
+  section.about > div.content img[alt=icon] {width: 52px;}
+  section.about > div.content h1 {font-size: 48px;}
+  section.about > div.content h2 {font-size: 28px;}
+  section.about > div.content p {font-size: 20px;}
+  section.about > div.content div.download-links a {font-size: 16px;}
+  div.expansion-panel > div.title > h2 {font-size: 20px;}
+
+
+}
 /* animations */
 .fade-up[data-scroll] {
-  transition-property: all;
+  transition-property: opacity, transform;
   transition-duration: 800ms;
   transition-timing-function: cubic-bezier(.075, .82, .165, 1);
 }
