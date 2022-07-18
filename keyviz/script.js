@@ -22,7 +22,7 @@ ScrollOut({
     if (element.id == "hero-h1" && heroPlayed) {
       heroAnimation.play();
     } else if (element.id == "press-h1") {
-      setTimeout(()=>pressAnimation.play(), 1000);
+      setTimeout(()=>pressAnimation.play(), 800);
     } else if (element.id == "style-h1") {
       reelAnimation.style.opacity = 1;
       reelAnimation.play();
