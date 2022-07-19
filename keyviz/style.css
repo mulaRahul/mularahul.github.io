@@ -16,10 +16,6 @@
   color: white;
   font-family: MonumentExtended;
 }
-h2 {
-  display: block;
-  overflow: hidden;
-}
 html {
   scroll-snap-type: y proximity;
 }
@@ -44,6 +40,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #3a3a3a;
 }
+div.not-supported {
+  display: none;
+}
 section {
   position: relative;
   width: 88vw;
@@ -59,6 +58,10 @@ h1 {
   text-shadow: 0 0 24px #202020;
   line-height: 1.25em;
   font-family: MonumentExtendedBold;
+}
+h2 {
+  display: block;
+  overflow: hidden;
 }
 p {
   margin-top: 1em;
@@ -310,8 +313,18 @@ div.expansion-panel > div.body > table td {
   nav a { font-size: 18px; }
   h1 { font-size: 68px; }
   p { font-size: 28px; }
-  section.about > div.content { padding: 8% 0; }
-  section.about > div.content h1 { font-size: 64px; }
+  section.about { width: 92%; }
+  section.about div.img-container > img { max-width: 96vw; }
+  section.about > div.content { padding: 8% 0; width: 46%; }
+  section.about > div.content h1 { font-size: 50px; }
+  section.about > div.content img[alt=icon] { width: 50px; }
+  section.about > div.content > h2 { font-size: 20px; }
+  section.about > div.content p { font-size: 20px; }
+  section.about > div.content > div.download-links > a { font-size: 16px; }
+  div.expansion-panel > div.title h2 { font-size: 20px; }
+  div.expansion-panel > div.body,
+  div.expansion-panel > div.body table td,
+  div.expansion-panel > div.body table th {font-size: 16px;}
 }
 @media (max-width: 1080px) {
   section.press { height: 86vh; }
@@ -321,37 +334,32 @@ div.expansion-panel > div.body > table td {
     max-width: 48%; height: min-content; bottom: 8%;
   }
   section.about { 
-    display: flex; flex-direction: column-reverse; padding-left: 1vw;
+    display: flex; flex-direction: column-reverse; padding-top: 4%;
   }
   section.about > div.img-container { 
     position: relative; height: 68vh; width: 100%;
   }
   section.about > div.img-container > img { max-width: 120vw; }
   section.about > div.content { 
-    align-self: center; padding-left: 12%; width: 80%; 
+    align-self: center; padding-left: 12%; width: 56%; 
   }
-  section.about > div.content h1 { font-size: 64px; }
 }
-@media (max-width: 800px) {
-  nav {justify-content: center;}
-  nav h2 {display: none;}
-  h1 {font-size: 38px;}
-  p {font-size: 20px;}
-  section.press {height: 64vh;}
-  section.style {overflow: hidden;}
-  section.style > lottie-player {width: 144%; max-height: max-content;}
-  section.settings {height: 128vh;}
-  section.settings p {max-width: 90%;}
-  section.settings > lottie-player {min-width: 386px;}
-  section.about > div.img-container {height: 48vh;}
-  section.about > div.content img[alt=icon] {width: 52px;}
-  section.about > div.content h1 {font-size: 48px;}
-  section.about > div.content h2 {font-size: 28px;}
-  section.about > div.content p {font-size: 20px;}
-  section.about > div.content div.download-links a {font-size: 16px;}
-  div.expansion-panel > div.title > h2 {font-size: 20px;}
-
-
+@media (max-width: 888px) {
+  main { display: none; }
+  div.not-supported { 
+    display: block;
+    padding: 16% 8%;
+    width: 84%;
+    height: 68%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 6vh;
+    
+  }
+  div.not-supported > p {
+    text-align: center; font-size: 24px;
+  }
 }
 /* animations */
 .fade-up[data-scroll] {
