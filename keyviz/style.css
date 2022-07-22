@@ -1,9 +1,9 @@
 @font-face {
-  font-family: MonumentExtended;
+  font-family: PPMonumentExtended;
   src: url("fonts/PPMonumentExtended-Regular.otf") format("opentype");
 }
 @font-face {
-  font-family: MonumentExtendedBold;
+  font-family: PPMonumentExtendedBold;
   src: url("fonts/PPMonumentExtended-Black.otf") format("opentype");
 }
 @font-face {
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   color: white;
-  font-family: MonumentExtended;
+  font-family: PPMonumentExtended;
 }
 html {
   scroll-snap-type: y proximity;
@@ -57,7 +57,7 @@ h1 {
   text-align: left;
   text-shadow: 0 0 24px #202020;
   line-height: 1.25em;
-  font-family: MonumentExtendedBold;
+  font-family: PPMonumentExtendedBold;
 }
 h2 {
   display: block;
@@ -221,12 +221,12 @@ section.about img[alt=icon] {
 section.about h1 {
   font-size: 74px;
   margin-left: 0.72em;
-  font-family: MonumentExtended;
+  font-family: PPMonumentExtended;
 }
 section.about h2 {
   margin: 1em 0;
 }
-section.about > div.content p {
+section.about > div.content > p {
   margin-bottom: 1em;
   max-width: 88%;
   font-size: 24px;
