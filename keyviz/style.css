@@ -40,9 +40,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #3a3a3a;
 }
-div.not-supported {
-  display: none;
-}
+div.not-supported { display: none; }
 section {
   position: relative;
   width: 88vw;
@@ -53,7 +51,7 @@ section {
   scroll-snap-align: start;
 }
 h1 {
-  font-size: 80px;
+  font-size: 68px;
   text-align: left;
   text-shadow: 0 0 24px #202020;
   line-height: 1.25em;
@@ -66,8 +64,8 @@ h2 {
 p {
   margin-top: 1em;
   font-family: Poppins;
-  font-size: 30px;
-  max-width: 16em;
+  font-size: 24px;
+  max-width: 18em;
   pointer-events: none;
   color: lightgrey;
 }
@@ -311,8 +309,7 @@ div.expansion-panel > div.body > table td {
 @media (max-width: 1264px) {
   nav h2 { font-size: 24px; }
   nav a { font-size: 18px; }
-  h1 { font-size: 68px; }
-  p { font-size: 28px; }
+  h1 { font-size: 64px; }
   section.about { width: 92%; }
   section.about div.img-container > img { max-width: 96vw; }
   section.about > div.content { padding: 8% 0; width: 46%; }
