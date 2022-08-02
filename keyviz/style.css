@@ -173,6 +173,7 @@ section.settings > img {
   position: absolute;
   z-index: -1;
   right: 4%;
+  bottom: 12%;
   max-width: 44%;
   align-self: center;
 }
