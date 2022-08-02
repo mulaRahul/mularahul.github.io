@@ -26,8 +26,6 @@ ScrollOut({
     } else if (element.id == "style-h1") {
       reelAnimation.style.opacity = 1;
       reelAnimation.play();
-    } else if (element.id == "settings-h1") {
-      settingsAnimation.play();
     } 
   },
   onHidden: function (element) {
@@ -38,8 +36,6 @@ ScrollOut({
     } else if (element.id == "style-h1") {
       reelAnimation.style.opacity = 0;
       reelAnimation.pause();
-    } else if (element.id == "settings-h1") {
-      settingsAnimation.pause();
     } 
   }
 });

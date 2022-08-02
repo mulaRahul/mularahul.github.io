@@ -169,12 +169,11 @@ section.style > lottie-player {
   transition: opacity 200ms;
 }
 /* settings section */
-section.settings > lottie-player {
+section.settings > img {
   position: absolute;
   z-index: -1;
-  right: 12%;
-  max-width: 40%;
-  max-height: 86%;
+  right: 4%;
+  max-width: 44%;
   align-self: center;
 }
 /* about section */
@@ -189,7 +188,7 @@ section.about {
 }
 section.about > div.img-container {
   top: 0;
-  width: 75%;
+  width: 64%;
   height: 100vh;
   position: sticky;
   z-index: 10;
@@ -198,7 +197,7 @@ section.about > div.img-container > img {
   position: absolute;
   left: 0;
   bottom: 0;
-  max-width: 92vw;
+  max-width: 64vw;
   pointer-events: none;
 }
 section.about > div.content {
@@ -311,7 +310,6 @@ div.expansion-panel > div.body > table td {
   nav a { font-size: 18px; }
   h1 { font-size: 64px; }
   section.about { width: 92%; }
-  section.about div.img-container > img { max-width: 96vw; }
   section.about > div.content { padding: 8% 0; width: 46%; }
   section.about > div.content h1 { font-size: 50px; }
   section.about > div.content img[alt=icon] { width: 50px; }
