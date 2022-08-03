@@ -1,1 +1,79 @@
-<div>Hello ✨ Universe!<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Mula</title>
+</head>
+<style>
+    @font-face {
+        font-family: PPMonumentExtendedBold;
+        src: url("./keyviz/fonts/PPMonumentExtended-Black.otf");
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+    }
+    ::selection {
+        background-color: #fff;
+        color: #1c1c1c;
+        text-shadow: none;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.bg {
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(10)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='hsla(0, 0%, 80%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+    }
+    div.particle {
+        position: fixed;
+        width: 24vw;
+        height: 24vw;
+        border-radius: 200px;
+        filter: blur(48px);
+    }
+    div.particle.pink {
+        top: 16%;
+        left: 8%;
+        background-color: lightpink;
+    }
+    div.particle.blue {
+        bottom: 28%;
+        right: 24%;
+        background-color: lightskyblue;
+    }
+    div.particle.yellow {
+        top: 44%;
+        right: 50%;
+        background-color: rgb(255, 255, 128);
+    }
+    h1 {
+        margin-right: 16%;
+        font-size: 96px;
+        font-family: PPMonumentExtendedBold;
+        text-shadow: 0 0 36px rgb(0, 0, 0, .36);
+    }
+</style>
+<body>
+    <main>
+        <div class="bg">
+            <div class="particle pink"></div>
+            <div class="particle blue"></div>
+            <div class="particle yellow"></div>
+        </div>
+        <h1>
+            Development<br/>🛠️ in progress...
+        </h1>
+    </main>
+</body>
+</html>
