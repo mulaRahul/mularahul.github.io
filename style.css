@@ -76,3 +76,6 @@ div.contact::after {
     background-color: black;
     transition: width 800ms ease;
 }
+@media (max-width: 1500px) {
+    h1 { font-size: 64px; }
+}
