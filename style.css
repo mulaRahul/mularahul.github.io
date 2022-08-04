@@ -72,6 +72,7 @@ div.contact::after {
     right: 0;
     width: 0;
     color: white;
+    overflow: hidden;
     background-color: black;
     transition: width 800ms ease;
 }
