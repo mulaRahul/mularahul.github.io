@@ -80,15 +80,9 @@ div.particle {
 	height: 24vw;
 	filter: blur(64px);
 }
-div.particle:nth-child(1) {
-	animation: particle1 22s ease-out infinite;
-}
-div.particle:nth-child(2) {
-	animation: particle3 26s ease-out infinite;
-}
-div.particle:nth-child(3) {
-	animation: particle2 20s ease-out infinite;
-}
+div.particle:nth-child(1) { animation: particle1 22s ease-out infinite; }
+div.particle:nth-child(2) { animation: particle3 26s ease-out infinite; }
+div.particle:nth-child(3) {	animation: particle2 20s ease-out infinite; }
 div.particle.pink {
   top: 16%;
   left: 8%;
