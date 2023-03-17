@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: Poppins;
-  src: url("fonts/Poppins-Light.ttf");
+  src: url("./keyviz/fonts/Poppins-Light.ttf");
 }
 * {
   margin: 0;
