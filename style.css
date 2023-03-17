@@ -2,141 +2,86 @@
   font-family: PPMonumentExtendedBold;
   src: url("./keyviz/fonts/PPMonumentExtended-Black.otf");
 }
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/Poppins-Light.ttf");
+}
 * {
   margin: 0;
   padding: 0;
-  pointer-events: none;
   font-family: PPMonumentExtendedBold;
 }
 ::selection {
-  background-color: #fff;
-  color: #1c1c1c;
+  background-color: #000;
+  color: #fff;
   text-shadow: none;
 }
 main {
   width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: start;
-  justify-content: center;
   flex-direction: column;
-}
-[data-scroll] {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 600ms ease, transform 600ms ease;
-}
-[data-scroll="in"] {
-  opacity: 100;
-  transform: translateY(0);
-}
-.t-short-delay { transition-delay: 200ms; }
-div.bg {
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(10)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.2' stroke='hsla(0, 0%, 80%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
-}
-@keyframes particle1 {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
-}
-@keyframes particle2 {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform: translate(4%, -9%); }
-  20% { transform: translate(4%, 29%); }
-  30% { transform: translate(24%, 5%); }
-  40% { transform: translate(39%, -16%); }
-  50% { transform: translate(19%, -18%); }
-  60% { transform: translate(-14%, 0%); }
-  70% { transform: translate(41%, 28%); }
-  80% { transform: translate(42%, 1%); }
-  90% { transform: translate(-1%, -28%); }
-}
-@keyframes particle3 {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform: translate(-4%, 0%); }
-  20% { transform: translate(-8%, 9%); }
-  30% { transform: translate(28%, -32%); }
-  40% { transform: translate(7%, -7%); }
-  50% { transform: translate(32%, 16%); }
-  60% { transform: translate(-8%, 19%); }
-  70% { transform: translate(2%, 9%); }
-  80% { transform: translate(40%, -22%); }
-  90% { transform: translate(6%, -5%); }
-}
-div.particle {
-	position: fixed;
-	width: 24vw;
-	height: 24vw;
-	filter: blur(64px);
-}
-div.particle:nth-child(1) { animation: particle1 22s ease-out infinite; }
-div.particle:nth-child(2) { animation: particle3 26s ease-out infinite; }
-div.particle:nth-child(3) {	animation: particle2 20s ease-out infinite; }
-div.particle.pink {
-  top: 16%;
-  left: 8%;
-  border-radius: 50%;
-  background-color: hsl(316, 73%, 52%);
-}
-div.particle.blue {
-  bottom: 28%;
-  right: 24%;
-  border-radius: 36%;
-  background-color: hsl(185, 100%, 57%);
-}
-div.particle.yellow {
-  top: 44%;
-  right: 50%;
-  border-radius: 0%;
-  background-color: hsl(38, 99%, 67%);
+  align-items: center;
 }
 h1 {
-  margin-left: 2em;
-  font-size: 96px;
-  text-shadow: 0 0 36px rgb(0, 0, 0, .36);
+  margin: 80px 0px;
+  position: relative;
+  font-size: 64px;
 }
-@keyframes revolve {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(359deg); }
+.container {
+  width: 80vw;
+  padding: 0px 10vw;
+  display: flex;
+  column-gap: 80px;
+  row-gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
 }
-h1 > span {
-  display: inline-block;
-  animation: revolve 4s linear;
-  animation-iteration-count: infinite;
+.card {
+  position: relative;
+  width: 25vw;
+  min-width: 400px;
+  height: 600px;
+
+  border: solid 1px black;
 }
-div.contact {
-  pointer-events: all;
-  position: fixed;
-  top: 4%;
-  right: 2%;
-  transition: width 400ms;
+.card .visual {
+  width: 100%;
+  height: 65%;
 }
-div.contact:hover::after{
-  width: 368px;
+.card .visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-div.contact::after {
-  content: "rahulmula10@gmail.com";
-  display: block;
+.card .content {
+  border-top: solid 1px black;
+  padding: 20px;
+}
+.card .content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card .content p {
+  font-size: 16px;
+  font-family: Poppins;
+}
+.card .content a  {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  color: white;
-  overflow: hidden;
-  background-color: black;
-  transition: width 800ms ease;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
 }
-@media (max-width: 1500px) {
-  h1 { font-size: 64px; }
+.card .content a img {
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(0);
+  transition: transform 200ms;
+}
+.card .content a img:hover {
+  transform: rotateZ(-45deg);
+}
+@media (max-width: 888px) {
+  h1 { font-size: 32px; }
 }
