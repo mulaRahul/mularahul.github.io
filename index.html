@@ -19,10 +19,21 @@
 </head>
 <body>
 	<main>
-		<h1>Rahul Mula</h1>
+		<div class="title">
+			<div data-scroll="out" style="transition-duration: 300ms;">R</div>
+			<div data-scroll="out" style="transition-duration: 450ms;">a</div>
+			<div data-scroll="out" style="transition-duration: 600ms;">h</div>
+			<div data-scroll="out" style="transition-duration: 750ms;">u</div>
+			<div data-scroll="out" style="transition-duration: 900ms;">l</div>
+			<div data-scroll="out" style="width: .51ch;"></div>
+			<div data-scroll="out" style="transition-duration: 1050ms;">M</div>
+			<div data-scroll="out" style="transition-duration: 1200ms;">u</div>
+			<div data-scroll="out" style="transition-duration: 1350ms;">l</div>
+			<div data-scroll="out" style="transition-duration: 1500ms;">a</div>
+		</div>
 		
 		<div class="container">
-			<div class="card">
+			<div class="card" data-scroll="out">
 				<div class="visual">
 					<img src="assets/python-book.png" alt="book-cover">
 				</div>
@@ -36,7 +47,7 @@
 				</div>
 			</div>
 			
-			<div class="card">
+			<div class="card" data-scroll="out">
 				<div class="visual">
 					<img src="assets/instructor.png" alt="">
 				</div>
@@ -50,7 +61,7 @@
 				</div>
 			</div>
 			
-			<div class="card">
+			<div class="card" data-scroll="out">
 				<div class="visual">
 					<img src="assets/keyviz.png" alt="keyviz-usage" style="object-position: 0;">
 				</div>
@@ -64,7 +75,7 @@
 				</div>
 			</div>
 			
-			<div class="card">
+			<div class="card" data-scroll="out">
 				<div class="visual">
 					<img src="assets/refresh.png" alt="refresh-banner" style="object-position: 0;">
 				</div>
@@ -78,7 +89,8 @@
 				</div>
 			</div>
 		</div>
-
 	</main>
+	<script src="scroll-out.min.js"></script>
+	<script>ScrollOut();</script>
 </body>
 </html>
