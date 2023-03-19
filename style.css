@@ -95,5 +95,20 @@ h1 {
   transform: rotateZ(-45deg);
 }
 @media (max-width: 888px) {
-  h1 { font-size: 32px; }
+  h1 { font-size: 28px; }
+  .card {
+    width: 75vw;
+    min-width: 260px;
+  }
+  .card { height: 500px; }
+  .card .visual { height: 65%; }
+  .card .content h2 { font-size: 16px; margin-top: 0px; margin-bottom: 10px; }
+  .card .content p { font-size: 14px; }
+  .card .content a {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+  }
 }
