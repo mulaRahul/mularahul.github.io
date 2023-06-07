@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="elements">
+                <canvas id="hero-elements" width="1920" height="1080"></canvas>
+            </div>
+            <canvas id="hero-grid" width="1920" height="1080"></canvas>
+        </section>
+        <section>
+            <div class="buttonBar">
+                <a class="active">All</a>
+                <a>Interactive</a>
+                <a>Logo</a>
+                <a>Hand-drawn</a>
+                <a>Icon</a>
+            </div>
+            <ul class="container"></ul>
+        </section>
+        
+        <footer>
+            <div class="content">
+                <h1>Let's get in touch!</h1>
+                <div class="row">
+                    <div class="btn" id="mail">
+                        <div class="label">
+                            <img src="assets/mail.svg" alt="mail-icon"> Email
+                        </div>
+                        <div class="value">
+                            <a href="mailto:rahulmula10@gmail.com">
+                                rahulmula10@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="btn" id="discord">
+                        <div class="label">
+                            <img src="assets/discord-logo.svg" alt="discord-icon"> Discord
+                        </div>
+                        <div class="value">
+                            <a>mula#4073</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.102"></script>
+    <script src="index-min.js"></script>
+</body>
+</html>

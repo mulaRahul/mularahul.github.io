@@ -1,0 +1,4 @@
+# scss files
+*.scss
+*.css.map
+index.js
