@@ -142,21 +142,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // :: footer ::
-    const contactBtn = document.querySelector(".footer #contact");
-    const rect = contactBtn.getBoundingClientRect();
-    // highlight contact    
-    gsap.to(".footer .highlight", {
-        x: rect.x,
-        y: contactBtn.getBoundingClientRect().y - document.querySelector(".footer").getBoundingClientRect().y,
-        width: rect.width,
-        height: rect.height,
-        scrollTrigger: {
-            trigger: ".footer",
-            start: "top 80%",
-            end: "bottom bottom",
-            scrub: 1,
-        },
-    });
+    setTimeout(() => {        
+        const contactBtn = document.querySelector(".footer #contact");
+        const rect = contactBtn.getBoundingClientRect();
+        // highlight contact    
+        gsap.to(".footer .highlight", {
+            x: rect.x,
+            y: contactBtn.getBoundingClientRect().y - document.querySelector(".footer").getBoundingClientRect().y,
+            width: rect.width,
+            height: rect.height,
+            scrollTrigger: {
+                trigger: ".footer",
+                start: "top 80%",
+                end: "bottom bottom",
+                scrub: 1,
+            },
+        });
+    }, 3000);
 
     // :: italics hover interaction ::
     gsap.utils.toArray("i.hover-rot").forEach(e => {
